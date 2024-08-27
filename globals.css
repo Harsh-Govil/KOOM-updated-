@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== stream css overrides ======== */
+.str-video__call-stats {
+  max-width: 500px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #1c1f2e 0%, #3a3d56 100%);
+  padding: 10px;
+}
+
+.str-video__speaker-layout__wrapper {
+  max-height: 700px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.str-video__participant-details {
+  color: white;
+  font-weight: bold;
+}
+
+.str-video__menu-container {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.str-video__notification {
+  color: white;
+  background: rgba(255, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.str-video__participant-list {
+  background-color: #1c1f2e;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.str-video__call-controls__button {
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  color: white;
+  transition: background 0.3s;
+}
+
+.str-video__call-controls__button:hover {
+  background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+.glassmorphism2 {
+  background: rgba(18, 17, 17, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(18, 17, 17, 0.18);
+  border-radius: 10px;
+}
+
+/* ==== clerk class override ===== */
+.cl-providerIcon__github {
+  filter: invert(1);
+}
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  border-radius: 5px;
+}
+
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+.cl-socialButtonsIconButton:hover {
+  border: 3px solid #ff7e5f;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButton {
+  color: white;
+  background: linear-gradient(135deg, #1c1f2e 0%, #3a3d56 100%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+.cl-userButtonPopoverActionButton:hover {
+  background: linear-gradient(135deg, #3a3d56 0%, #1c1f2e 100%);
+}
+
+/* =============================== */
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
+
+/* animation */
+
+.show-block {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  animation: show 0.7s forwards linear;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes show {
+  0% {
+    animation-timing-function: ease-in;
+    width: 0%;
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    width: 100%;
+  }
+}
+
+  
